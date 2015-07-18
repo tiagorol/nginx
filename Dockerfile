@@ -20,7 +20,7 @@ ADD nginx.conf /etc/nginx/
 
 #Permissão
 ADD run.sh /usr/local/bin/run.sh
-RUN chmod +x /usr/local/bin/run.sh
+RUN sudo chmod +x /usr/local/bin/run.sh
 
 EXPOSE 80
 
