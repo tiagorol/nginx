@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+if [ ! -z $HOST_NGINX ];then
+   sed -i "s/HOST_NGINX/$HOST_NGINX/" /etc/nginx/nginx.conf
+fi
+
 if [ ! -z $HOST_WP1 ];then
    sed -i "s/#server HOST_WP1 weight=1;/server $HOST_WP1 weight=1;/" /etc/nginx/nginx.conf
 fi
